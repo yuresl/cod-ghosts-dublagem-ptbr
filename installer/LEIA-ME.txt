@@ -1,0 +1,62 @@
+﻿CALL OF DUTY: GHOSTS (PC) - TRADUÇÃO E DUBLAGEM PT-BR COMPLETA
+==============================================================
+
+O que este instalador coloca no jogo
+------------------------------------
+* Tradução de textos, menus e legendas (Tribo Gamer).
+* Dublagem oficial em PT-BR, portada da versão de PS4 para o formato do PC:
+  - diálogos de gameplay, rádio e chamadas de combate;
+  - cutscenes feitas no motor do jogo (em tempo real);
+  - áudio dos vídeos de carregamento das missões.
+
+Requisitos
+----------
+* Call of Duty: Ghosts para PC, build 702660, com a pasta "english" original.
+* Cerca de 3 GB livres no disco do jogo.
+* Feche o jogo antes de instalar.
+
+Como funciona
+-------------
+* A pasta "portuguese" existente e os vídeos que serão alterados são guardados
+  em "_ptbr_backup", dentro da pasta do jogo.
+* Os arquivos de som em português são gerados a partir dos arquivos em inglês
+  do próprio jogo, com conferência de integridade (MD5) antes e depois.
+* Os vídeos de carregamento recebem o áudio do PS4 por meio de patches, também
+  com conferência de integridade.
+* Para remover: Painel de Controle > Programas > "Call of Duty: Ghosts -
+  Tradução e Dublagem PT-BR". O desinstalador devolve os arquivos originais.
+
+Observações
+-----------
+* Algumas falas de inimigos e figurantes continuam em inglês: a própria versão
+  brasileira do PS4 não as dublou.
+* Uma fala do Hesh no Prólogo ("Let's check the kill") foi adicionada numa
+  atualização do PC posterior à versão de PS4 usada e não tem dublagem.
+* Os dois vídeos da missão "Sem Laços" (satfarm_b_load e
+  satfarm_transition_ghost) continuam os originais do PC, porque os do PS4 têm
+  outra organização de faixas de áudio.
+
+Créditos
+--------
+TRADUÇÃO - Tribo Gamer (versão 1.01, 07/02/2014)
+  Administrador ............ H3rdell
+  Tradução ................. H3rdell, killerking6261053 e Metralha
+  Revisão e testes in-game . H3rdell e killerking6261053
+  Instalador ............... H3rdell
+  Ferramentas .............. TriboGamerBrasil
+
+PACOTE DE 2022 - Mente Bizarra (31/12/2022)
+  As zonas de texto "por_*.ff" desse pacote são a base das zonas usadas por
+  este instalador; nelas só foram substituídas as referências de áudio.
+
+DUBLAGEM - Oficial (Activision / Infinity Ward)
+  Fonte .................... versão de PS4 (CUSA00018, v1.00)
+  Porte para o PC .......... yuresl (https://github.com/yuresl)
+                             engenharia reversa dos arquivos de som, das zonas
+                             e dos vídeos do PS4, convertidos para o formato do PC.
+
+FERRAMENTAS DE TERCEIROS
+  hpatchz (HDiffPatch, licença MIT), usado para aplicar os patches dos vídeos.
+
+Os textos e a dublagem pertencem aos seus respectivos autores. Este pacote não
+contém o jogo: ele exige uma cópia do Call of Duty: Ghosts para PC.

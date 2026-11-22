@@ -1,0 +1,45 @@
+diff --git a/LibOrbisPkg.Core/LibOrbisPkg.Core.csproj b/LibOrbisPkg.Core/LibOrbisPkg.Core.csproj
+index 5f0fe49..a164bd1 100644
+--- a/LibOrbisPkg.Core/LibOrbisPkg.Core.csproj
++++ b/LibOrbisPkg.Core/LibOrbisPkg.Core.csproj
+@@ -1,7 +1,7 @@
+-﻿<Project Sdk="Microsoft.NET.Sdk">
++<Project Sdk="Microsoft.NET.Sdk">
+ 
+   <PropertyGroup>
+-    <TargetFramework>netcoreapp3.0</TargetFramework>
++    <TargetFramework>net8.0</TargetFramework>
+     <RootNamespace>LibOrbisPkg</RootNamespace>
+     <LangVersion>7.3</LangVersion>
+     <Platforms>AnyCPU</Platforms>
+diff --git a/LibOrbisPkg/PFS/PFSCReader.cs b/LibOrbisPkg/PFS/PFSCReader.cs
+index 12c6c1b..a1d0ddf 100644
+--- a/LibOrbisPkg/PFS/PFSCReader.cs
++++ b/LibOrbisPkg/PFS/PFSCReader.cs
+@@ -84,7 +84,10 @@ namespace LibOrbisPkg.PFS
+         using (var bufStream = new MemoryStream(sectorBuf))
+         using (var ds = new DeflateStream(bufStream, CompressionMode.Decompress))
+         {
+-          ds.Read(output, 0, hdr.BlockSz);
++          // .NET 6+: DeflateStream.Read pode devolver menos bytes que o pedido; ler até completar o bloco
++          int total = 0, n;
++          while (total < hdr.BlockSz && (n = ds.Read(output, total, hdr.BlockSz - total)) > 0)
++            total += n;
+         }
+       }
+     }
+diff --git a/PkgTool.Core/PkgTool.Core.csproj b/PkgTool.Core/PkgTool.Core.csproj
+index 10e4e0b..181ad54 100644
+--- a/PkgTool.Core/PkgTool.Core.csproj
++++ b/PkgTool.Core/PkgTool.Core.csproj
+@@ -1,8 +1,8 @@
+-﻿<Project Sdk="Microsoft.NET.Sdk">
++<Project Sdk="Microsoft.NET.Sdk">
+ 
+   <PropertyGroup>
+     <OutputType>Exe</OutputType>
+-    <TargetFramework>netcoreapp3.0</TargetFramework>
++    <TargetFramework>net8.0</TargetFramework>
+     <StartupObject>PkgTool.Program</StartupObject>
+     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

@@ -1,0 +1,36 @@
+# Nunca versionar arquivos do jogo, do dump do PS4, da tradução ou gerados a partir deles
+*.pkg
+*.pak
+*.ff
+*.bik
+*.ptbr
+*.hdiff
+*.flac
+*.mp3
+*.wav
+*.raw
+*.svg
+*.iw6
+*.exe
+*.dll
+*.elf
+*.bin
+
+# Pastas de trabalho
+backup_pc_original/
+ps4_extract/
+work/
+build/
+gravacoes/
+logs/
+installer/output/
+installer/payload/
+tools/LibOrbisPkg/
+tools/bin/
+
+# Python
+__pycache__/
+*.pyc
+
+# Despejos de erro de ferramentas
+*.stackdump
